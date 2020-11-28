@@ -12,6 +12,7 @@ import { SingleComponent } from './pages/single/single.component';
   imports: [
     CommonModule,
     CursosRoutingModule
-  ]
+  ],
+  exports: [CursosComponent, AllComponent, SingleComponent],
 })
 export class CursosModule { }

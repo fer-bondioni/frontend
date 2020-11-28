@@ -1,1 +1,49 @@
-<p>create works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-7">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="nombre"
+              formControlName="nombre"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="apellido"
+              formControlName="apellido"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="dni"
+              formControlName="dni"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="file"
+              class="form-control"
+              (change)="onFileSelected($event)"
+            />
+            <div *ngIf="image">
+              <img [src]="previewUrl" style="width: 12rem; height: auto" />
+              <button type="button" (click)="eliminar()">X</button>
+            </div>
+          </div>
+          <button type="button" (click)="upload()" [disabled]="form.invalid">
+            Nuevo docente
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+  <button mat-button color="primary">Primary</button> -->
+  

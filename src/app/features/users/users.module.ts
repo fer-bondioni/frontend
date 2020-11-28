@@ -12,6 +12,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
   imports: [
     CommonModule,
     UsersRoutingModule
-  ]
+  ],
+  exports:[UsersComponent, LoginComponent, RegistroComponent],
 })
 export class UsersModule { }

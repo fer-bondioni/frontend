@@ -1,1 +1,17 @@
-<p>all works!</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-12 mt-3 mb-3" *ngFor="let curso of cursos" >
+            <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">{{curso.nombre}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{curso.nombreCategoria}}</h6>
+                  <a [routerLink]="['/cursos/single', cursos.id]" class="card-link">Ver más</a>
+                </div>
+              </div>            
+        </div> 
+    </div>
+</div>
+ 
+ <!-- <ng-template #loading>
+<app-loading value="cursos"></app-loading>    
+</ng-template> -->

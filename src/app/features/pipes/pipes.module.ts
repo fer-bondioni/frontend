@@ -10,6 +10,7 @@ import { PipesComponent } from './pipes.component';
   imports: [
     CommonModule,
     PipesRoutingModule
-  ]
+  ],
+  exports: [PipesComponent],
 })
 export class PipesModule { }
