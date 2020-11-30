@@ -14,5 +14,9 @@ export class CursosService extends BaseService {
     this.setEndPoint(`${this.common}/single/${id}`);
     return this.get();
   }
+  create(obj){
+    this.setEndPoint(`${this.common}/create`);
+    return this.post(obj);
+  }
   
 }
